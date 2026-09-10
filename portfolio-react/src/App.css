@@ -1,0 +1,251 @@
+.page {
+  position: relative;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 88px 24px 64px;
+}
+
+.blueprint-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.5;
+}
+
+/* ---------- Hero ---------- */
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--accent);
+  margin: 0 0 12px;
+  letter-spacing: 0.02em;
+}
+
+.hero h1 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.1;
+  margin: 0 0 24px;
+  max-width: 14ch;
+}
+
+.hero-tagline {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: var(--text-muted);
+  min-height: 1.6em;
+  margin: 0 0 28px;
+}
+
+.hero-tagline .prompt {
+  color: var(--accent);
+}
+
+.cursor {
+  display: inline-block;
+  color: var(--accent);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero-meta {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.hero-links {
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.hero-links .dot {
+  color: var(--text-muted);
+  margin: 0 10px;
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  margin-top: 88px;
+}
+
+.section-label {
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--panel-border);
+  padding-bottom: 14px;
+}
+
+.sheet-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.sheet-tag.small {
+  margin-bottom: 0;
+  font-size: 11px;
+}
+
+.section-label h2 {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ---------- Projects ---------- */
+
+.projects {
+  display: grid;
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  padding: 24px;
+}
+
+.project-card-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.project-card-head h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.project-summary {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 16px;
+  max-width: 68ch;
+}
+
+.stack-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin: 0 0 14px;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.stack-tags li {
+  border: 1px solid var(--panel-border);
+  padding: 3px 8px;
+}
+
+.project-links {
+  display: flex;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+/* ---------- Research ---------- */
+
+.research-card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-left: 3px solid var(--accent);
+  padding: 24px;
+}
+
+.research-card h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+
+.research-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 68ch;
+}
+
+/* ---------- Skills ---------- */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 32px;
+}
+
+.skill-group h4 {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+  margin: 0 0 6px;
+  font-weight: 500;
+}
+
+.skill-group p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* ---------- Contact ---------- */
+
+.contact-line {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 60ch;
+  color: var(--text-muted);
+}
+
+.contact-line a {
+  color: var(--accent);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  margin-top: 96px;
+  padding-top: 20px;
+  border-top: 1px solid var(--panel-border);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  .page {
+    padding: 56px 18px 48px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    max-width: none;
+  }
+}
